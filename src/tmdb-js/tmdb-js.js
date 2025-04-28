@@ -23,6 +23,11 @@ const {TvShowSection} = require('./sections/types/tv_show');
 const {WatchProvidersSection} = require('./sections/types/watch_provider');
 
 /**
+ * Represents a client for accessing the TMDb API.
+ */
+export const TmdbClient = (apiKey, language = "en-US") => new TmdbClient(apiKey, language);
+
+/**
  * Can handle and get TMDB data.
  */
 exports.TmdbClient = class extends TmdbQuerier {
